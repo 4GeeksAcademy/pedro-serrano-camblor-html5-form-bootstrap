@@ -7,12 +7,13 @@
     <title>HTML5 FORM - BOOTSTRAP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <!-- <h1>Hello, world!</h1> -->
     <!-- Dentro de un form para poder usar botones en el footer -->
-    <div class="container">
+    <div class="container py-3">
         <form>
             <div class="card">
                 <div class="card-header text-start h4 fw-bold">
@@ -29,34 +30,164 @@
                     </div>
 
                     <!-- 5-3-4 row -->
-                    <div class="row">
+                    <div class="row py-2">
                         <div class="col-5">
                             <label for="cardNum" class="form-label fw-bold">Card #</label>
-                            <input type="text" class="form-control" id="cardNum" placeholder="XXXXXXXXXXXXX">
+                            <input type="number" class="form-control" id="cardNum" placeholder="XXXXXXXXXXXXX">
                         </div>
 
                         <div class="col-3">
                             <label for="cvcNum" class="form-label fw-bold">CVC #</label>
-                            <input type="text" class="form-control" id="cvcNum" placeholder="0000">
+                            <input type="number" class="form-control" id="cvcNum" placeholder="0000">
                         </div>
-                        <!-- SEGUIR DESDE AQUI -->
+
                         <div class="col-4">
-                            <div class="container-fluid ">
+                            <label for="amount" class="form-label fw-bold">Amount</label>
+                            <div class="input-group mb-3">
                                 <span class="input-group-text">$</span>
-                                <!-- <label for="amount" class="form-label fw-bold">Amount</label> -->
-                                <input type="text" class="form-control" id="amount" placeholder="0000">
+                                <input type="number" class="form-control" id="amount" placeholder="Amount">
+                            </div>
+                        </div>
+
+                        <!-- 6-6 row 1/2 -->
+                        <div class="row py-2">
+                            <div class="col">
+                                <label for="firstName" class="form-label fw-bold">First Name</label>
+                                <input type="text" class="form-control" id="firstName">
                             </div>
 
-                            <!-- <span class="input-group-text">$</span>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                            <span class="input-group-text">.00</span> -->
+                            <div class="col">
+                                <label for="secondName" class="form-label fw-bold">Last Name</label>
+                                <input type="text" class="form-control" id="secondName">
+                            </div>
                         </div>
 
-                    </div>
+                        <!-- 6-3-3 row -->
+                        <div class="row py-2">
+                            <div class="col">
+                                <label for="city" class="form-label fw-bold">City</label>
+                                <input type="text" class="form-control" id="city">
+                            </div>
 
+                            <div class="col-3">
+                                <label for="stateSelector" class="form-label fw-bold">State</label>
+                                <select class="form-select fst-italic text-secondary"
+                                    aria-label="Default select example" id="stateSelector">
+                                    <option selected>Pick a state</option>
+                                    <option value="1">Alabama</option>
+                                    <option value="2">Alaska</option>
+                                    <option value="3">Arizona</option>
+                                    <option value="4">Arkansas</option>
+                                    <option value="5">California</option>
+                                    <option value="6">Colorado</option>
+                                    <option value="7">Connecticut</option>
+                                    <option value="8">Delaware</option>
+                                    <option value="9">Florida</option>
+                                    <option value="10">Georgia</option>
+                                    <option value="11">Hawaii</option>
+                                    <option value="12">Idaho</option>
+                                    <option value="13">Illinois</option>
+                                    <option value="14">Indiana</option>
+                                    <option value="15">Iowa</option>
+                                    <option value="16">Kansas</option>
+                                    <option value="17">Kentucky</option>
+                                    <option value="18">Louisiana</option>
+                                    <option value="19">Maine</option>
+                                    <option value="20">Maryland</option>
+                                    <option value="21">Massachusetts</option>
+                                    <option value="22">Michigan</option>
+                                    <option value="23">Minnesota</option>
+                                    <option value="24">Mississippi</option>
+                                    <option value="25">Missouri</option>
+                                    <option value="26">Montana</option>
+                                    <option value="27">Nebraska</option>
+                                    <option value="28">Nevada</option>
+                                    <option value="29">New Hampshire</option>
+                                    <option value="30">New Jersey</option>
+                                    <option value="31">New Mexico</option>
+                                    <option value="32">New York</option>
+                                    <option value="33">North Carolina</option>
+                                    <option value="34">North Dakota</option>
+                                    <option value="35">Ohio</option>
+                                    <option value="36">Oklahoma</option>
+                                    <option value="37">Oregon</option>
+                                    <option value="38">Pennsylvania</option>
+                                    <option value="39">Rhode Island</option>
+                                    <option value="40">South Carolina</option>
+                                    <option value="41">South Dakota</option>
+                                    <option value="42">Tennessee</option>
+                                    <option value="43">Texas</option>
+                                    <option value="44">Utah</option>
+                                    <option value="45">Vermont</option>
+                                    <option value="46">Virginia</option>
+                                    <option value="47">Washington</option>
+                                    <option value="48">West Virginia</option>
+                                    <option value="49">Wisconsin</option>
+                                    <option value="50">Wyoming</option>
+
+                                </select>
+                            </div>
+
+                            <div class="col-3">
+                                <label for="postalCode" class="form-label fw-bold">Postal Code</label>
+                                <input type="text" class="form-control" id="postalCode">
+                            </div>
+
+                        </div>
+
+                        <!-- 6-6 row 2/2 -->
+                        <div class="row py-2">
+                            <div class="col-3">
+                                <label for="paymentMethod" class="form-label fw-bold">We accept:</label>
+                                <div class="d-flex flex-wrap gap-2 px-3 py-2 bg-secondary rounded" id="paymentMethod">
+                                    <div class="form-check m-0">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1" checked>
+                                        <label class="form-check-label" for="inlineRadio1">
+                                            <i class="fa-brands fa-cc-visa"></i>
+                                        </label>
+                                    </div>
+                                    <div class="form-check m-0">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">
+                                            <i class="fa-brands fa-cc-mastercard"></i>
+                                        </label>
+                                    </div>
+                                    <div class="form-check m-0">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">
+                                            <i class="fa-brands fa-cc-paypal"></i>
+                                        </label>
+                                    </div>
+                                    <div class="form-check m-0">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio4" value="option4">
+                                        <label class="form-check-label" for="inlineRadio4">
+                                            <i class="fa-brands fa-cc-amex"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3"></div>
+
+                            <div class="col-6">
+                                <label for="message" class="fw-bold">Message</label>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" style="height: 100px"></textarea>
+                                </div>
+                                <div class="form-text text-secondary fs-8">Add any notes here.</div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
+                <div class="card-footer text-end text-body-secondary bg-light">
+                    <button type="button" class="btn btn-secondary btn-sm">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-sm">Send</button>
                 </div>
             </div>
         </form>
